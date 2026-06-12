@@ -1,0 +1,261 @@
+/* ==========================
+   CSS VARIABLES & THEMES
+========================== */
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --primary-color: #2563eb;
+    --secondary-color: #f3f4f6;
+    --card-color: #ffffff;
+    --shadow: 0 4px 12px rgba(0,0,0,0.1);
+    --transition: 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --bg-color: #111827;
+    --text-color: #f9fafb;
+    --primary-color: #60a5fa;
+    --secondary-color: #1f2937;
+    --card-color: #374151;
+    --shadow: 0 4px 12px rgba(255,255,255,0.08);
+}
+
+/* ==========================
+   GLOBAL RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+    line-height: 1.6;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.theme-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.hero img {
+    width: 250px;
+    max-width: 100%;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+/* ==========================
+   ABOUT
+========================== */
+
+.about {
+    padding: 3rem 1rem;
+    background: var(--secondary-color);
+}
+
+/* ==========================
+   PROJECTS GRID
+========================== */
+
+.projects {
+    padding: 3rem 1rem;
+}
+
+.project-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--card-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* ==========================
+   SKILLS FLEXBOX
+========================== */
+
+.skills {
+    padding: 3rem 1rem;
+    background: var(--secondary-color);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.skill {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 25px;
+}
+
+/* ==========================
+   CONTACT FORM
+========================== */
+
+.contact {
+    padding: 3rem 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--primary-color);
+    color: white;
+}
+
+/* ==========================
+   TABLET VIEW
+========================== */
+
+@media (min-width: 768px) {
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        text-align: left;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================
+   DESKTOP VIEW
+========================== */
+
+@media (min-width: 1024px) {
+
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+}
