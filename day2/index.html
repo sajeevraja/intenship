@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">My Portfolio</div>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="theme-btn" onclick="toggleTheme()">
+            Toggle Theme
+        </button>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <img src="profile.jpg" alt="Profile Photo">
+
+    <div class="hero-content">
+        <h1>Hello, I'm Sajeev</h1>
+        <p>Full Stack Web Developer</p>
+        <a href="#projects" class="btn">View Projects</a>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+        Passionate web developer with experience in HTML,
+        CSS, JavaScript, React, Node.js and Database Systems.
+    </p>
+</section>
+
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+
+        <article class="card">
+            <h3>BookMyGames</h3>
+            <p>Online sports booking platform.</p>
+        </article>
+
+        <article class="card">
+            <h3>Portfolio Website</h3>
+            <p>Responsive personal portfolio.</p>
+        </article>
+
+        <article class="card">
+            <h3>E-Commerce App</h3>
+            <p>Modern shopping platform.</p>
+        </article>
+
+    </div>
+</section>
+
+<section id="skills" class="skills">
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+        <span class="skill">HTML5</span>
+        <span class="skill">CSS3</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">React</span>
+        <span class="skill">Node.js</span>
+        <span class="skill">MongoDB</span>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+
+    <form class="contact-form">
+
+        <input
+            type="text"
+            placeholder="Your Name"
+            required>
+
+        <input
+            type="email"
+            placeholder="Your Email"
+            required>
+
+        <textarea
+            rows="5"
+            placeholder="Message"
+            required></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Sajeev. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
